@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.bg-red {
+    padding: 50px;
+    background-color: red;
+}
