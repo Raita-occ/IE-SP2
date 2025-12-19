@@ -1,26 +1,197 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IE-SP2</title>
+    <title>Campus Planner - 大学生活の予定管理をもっとシンプルに</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <h1>これはH1のタイトルタグです。</h1>
-    <h2>これはH2のタイトルタグです。</h2>
-    <h3>これはH3のタイトルタグです。</h3>
-    <h4>これはH4のタイトルタグです。</h4>
-    <h5>これはH5のタイトルタグです。</h5>
-    <h6>これはH6のタイトルタグです。</h6>
 
-    <p>これは段落です。</p>
-    これは段落です。
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">Campus Planner</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#plans">プラン</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    test2
-    <p>コミットテスト</p>
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h2>大学生活の予定管理を、<br>もっとシンプルに。</h2>
+                <p>Campus Plannerは、講義・課題・バイト・サークルなど、ばらばらな予定をひとつの画面で管理できる大学生活専用のスケジュールアプリです。</p>
+                <a href="#" class="btn btn-primary">無料で試してみる</a>
+            </div>
+            <div class="hero-image">
+                <div class="phone-frame">
+                    <div class="screen">
+                        <div class="app-header">今日の予定</div>
+                        <div class="app-item item-blue">経済学の講義 <small>9:00 - 10:30</small></div>
+                        <div class="app-item item-green">レポート提出 <small>17:00 締切</small></div>
+                        <div class="app-item item-orange">サークル活動 <small>18:00 - 21:00</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">大学生活、こんな悩みはありませんか？</h2>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <span class="icon">😥</span>
+                    <p>課題の締め切りを<br>つい忘れてしまう</p>
+                </div>
+                <div class="problem-item">
+                    <span class="icon">😵</span>
+                    <p>サークルとバイトの<br>予定がかぶってしまう</p>
+                </div>
+                <div class="problem-item">
+                    <span class="icon">🤔</span>
+                    <p>グループ課題の進捗が<br>把握しづらい</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Campus Planner の3つの特徴</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>01 時間割と課題を一括管理</h3>
+                    <p>時間割と課題の締め切りをひとつの画面に表示。提出忘れを防ぎます。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>02 バイト・サークルも調整</h3>
+                    <p>大学の予定とプライベートの予定を色分けして見やすく管理できます。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>03 グループ共有で抜け漏れ防止</h3>
+                    <p>グループでタスクを共有し、進捗状況を可視化できます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps">
+        <div class="container">
+            <h2 class="section-title">3ステップでかんたんスタート</h2>
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-num">Step 1</div>
+                    <p>アカウント登録<br><small>メールアドレスだけでOK</small></p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">Step 2</div>
+                    <p>時間割・予定を登録<br><small>シンプルな入力画面</small></p>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">Step 3</div>
+                    <p>スマホでもPCでも確認<br><small>いつでもどこでもアクセス</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plans" class="pricing">
+        <div class="container">
+            <h2 class="section-title">シンプルな料金プラン</h2>
+            <div class="pricing-cards">
+                <div class="price-card">
+                    <h3 class="plan-name">FREE</h3>
+                    <div class="price">¥0</div>
+                    <ul class="plan-features">
+                        <li>予定 100件まで</li>
+                        <li>共有機能 なし</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">選択する</a>
+                </div>
+                <div class="price-card recommended">
+                    <div class="badge">おすすめ</div>
+                    <h3 class="plan-name">STUDENT</h3>
+                    <div class="price">¥300<span class="period">/月</span></div>
+                    <ul class="plan-features">
+                        <li>予定 無制限</li>
+                        <li>共有機能 3人まで</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">選択する</a>
+                </div>
+                <div class="price-card">
+                    <h3 class="plan-name">TEAM</h3>
+                    <div class="price">¥800<span class="period">/月</span></div>
+                    <ul class="plan-features">
+                        <li>予定 無制限</li>
+                        <li>共有機能 10人まで</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">選択する</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">よくあるご質問</h2>
+            <dl class="faq-list">
+                <div class="faq-item">
+                    <dt>Q. 本当に無料で使えますか？</dt>
+                    <dd>A. はい、FREEプランはずっと無料でお使いいただけます。</dd>
+                </div>
+                <div class="faq-item">
+                    <dt>Q. スマホだけでも使えますか？</dt>
+                    <dd>A. はい、スマートフォンアプリ（iOS/Android）とブラウザ版の両方に対応しています。</dd>
+                </div>
+                <div class="faq-item">
+                    <dt>Q. 大学のメールアドレスがなくても登録できますか？</dt>
+                    <dd>A. はい、個人のメールアドレスでも登録可能です。</dd>
+                </div>
+            </dl>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container contact-container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <p>ご不明な点がございましたら、お気軽にお問い合わせください。</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="subject">お問い合わせ種別</label>
+                    <select id="subject" name="subject">
+                        <option value="general">不具合</option>
+                        <option value="account">アカウントについて</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス <span class="required">必須</span></label>
+                    <input type="email" id="email" name="email" placeholder="example@campus-planner.jp">
+                </div>
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" name="message" rows="5" placeholder="お問い合わせ内容をご記入ください。"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">送信する</button>
+                <p class="form-note">※このサイトはデモ用です。実際には送信されません。</p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Campus Planner. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
-
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像とテキストのレイアウト</title>
+    <style>
+        /* --- 基本スタイル（お好みで） --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* --- ここからがレイアウトの核 --- */
+        
+        /* 1. 全体を囲むコンテナ */
+        .image-text-block {
+            display: flex;         /* これで子要素が横並びになります */
+            align-items: center; /* 画像とテキストを垂直方向中央に揃えます */
+            gap: 24px;           /* 画像とテキストの間の隙間 */
+            
+            /* 以下は装飾（オプション） */
+            max-width: 800px;    /* コンテナの最大幅 */
+            margin: 30px auto;   /* ページ中央に配置 */
+            padding: 24px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 2. 左側の画像 */
+        .image-text-block .img-container {
+            flex-shrink: 0;      /* コンテナが縮んでも画像サイズを維持 */
+        }
+        
+        .image-text-block img {
+            width: 200px;        /* 画像の幅を固定 */
+            height: 200px;       /* 画像の高さを固定 */
+            object-fit: cover;   /* 画像が指定サイズに収まるよう調整（トリミング） */
+            border-radius: 8px;  /* 画像の角を少し丸くする */
+            display: block;      /* 画像下の余分な隙間を削除 */
+        }
+
+        /* 3. 右側のテキストコンテンツ */
+        .image-text-block .text-content {
+            flex-grow: 1;        /* 残りのスペースをすべて埋めるように広がる */
+        }
+
+        .image-text-block h2 {
+            margin-top: 0;       /* 見出しの上マージンをリセット */
+            color: #333;
+        }
+
+        .image-text-block p {
+            margin-bottom: 0;    /* 段落の下マージンをリセット */
+            color: #555;
+        }
+
+        /* --- 4. レスポンシブ対応 (スマホ用) --- */
+        @media (max-width: 600px) {
+            .image-text-block {
+                flex-direction: column; /* 横並びを「縦積み」に変更 */
+                align-items: stretch;   /* 中央揃えを解除し、幅いっぱいに広げる */
+            }
+
+            .image-text-block img {
+                width: 100%;       /* 画像をコンテナ幅いっぱいに */
+                height: 200px;     /* 高さは固定 (または 'auto' に変更可) */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>画像（左）とテキスト（右）のブロック</h1>
+
+    <div class="image-text-block">
+        <div class="img-container">
+            <img src="https://picsum.photos/200" alt="説明文">
+        </div>
+        
+        <div class="text-content">
+            <h2>これが見出しです</h2>
+            <p>
+                ここにテキストが入ります。`display: flex;` を親要素に指定することで、画像とこのテキストブロックが横に並びます。
+                テキストが長くなっても、自動的に折り返されて右側の領域に収まります。
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

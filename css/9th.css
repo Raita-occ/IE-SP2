@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body {
+    background: linear-gradient(135deg, #0ea5e9 0%, #a78bfa 50%, #f472b6 100%);
+    height: 200vh;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    /* justify-content: center; */
+    /* justify-content: flex-start; */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.flex-item {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .10);
+
+    height: 300px;
+    width: 30%;
+    background-color: white;
+}
+
+
+/* card */
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 0 5%;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: beige;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* card */
+
+
+/* ヒーロー */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://picsum.photos/1200/600) center/cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+/* ヒーロー */
+
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: aquamarine;
+}
+
+.nav-list {
+    display:
+        none;
+}
+
+.nav-list.active {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .menu-toggle {
+        display:
+            none;
+    }
+
+    .nav-list {
+        display: flex;
+        gap: 1.5rem;
+    }
+}
+
+/* navbar */
+
+/* GEMINI */
+/* 1. 全体を囲むコンテナ */
+.image-text-block {
+    display: flex;
+    /* これで子要素が横並びになります */
+    align-items: center;
+    /* 画像とテキストを垂直方向中央に揃えます */
+    gap: 24px;
+    /* 画像とテキストの間の隙間 */
+
+    /* 以下は装飾（オプション） */
+    max-width: 800px;
+    /* コンテナの最大幅 */
+    margin: 30px auto;
+    /* ページ中央に配置 */
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. 左側の画像 */
+.image-text-block .img-container {
+    flex-shrink: 0;
+    /* コンテナが縮んでも画像サイズを維持 */
+}
+
+.image-text-block img {
+    width: 200px;
+    /* 画像の幅を固定 */
+    height: 200px;
+    /* 画像の高さを固定 */
+    object-fit: cover;
+    /* 画像が指定サイズに収まるよう調整（トリミング） */
+    border-radius: 8px;
+    /* 画像の角を少し丸くする */
+    display: block;
+    /* 画像下の余分な隙間を削除 */
+}
+
+/* 3. 右側のテキストコンテンツ */
+.image-text-block .text-content {
+    flex-grow: 1;
+    /* 残りのスペースをすべて埋めるように広がる */
+}
+
+.image-text-block h2 {
+    margin-top: 0;
+    /* 見出しの上マージンをリセット */
+    color: #333;
+}
+
+.image-text-block p {
+    margin-bottom: 0;
+    /* 段落の下マージンをリセット */
+    color: #555;
+}
+
+/* --- 4. レスポンシブ対応 (スマホ用) --- */
+@media (max-width: 600px) {
+    .image-text-block {
+        flex-direction: column;
+        /* 横並びを「縦積み」に変更 */
+        align-items: stretch;
+        /* 中央揃えを解除し、幅いっぱいに広げる */
+    }
+
+    .image-text-block img {
+        width: 100%;
+        /* 画像をコンテナ幅いっぱいに */
+        height: 200px;
+        /* 高さは固定 (または 'auto' に変更可) */
+    }
+}
+
+/* GEMINI */
